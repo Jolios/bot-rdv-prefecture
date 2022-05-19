@@ -23,7 +23,7 @@ port = 587  # For starttls
 smtp_server = "smtp.live.com"
 sender_email = "email@hotmail.com"
 password = "azerty"
-message = """\
+message = """
 Subject: Check PREFECTURE
 
 This message is sent from Python."""
