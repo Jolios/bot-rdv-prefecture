@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 import smtplib, ssl
 
-url = "https://pprdv.interieur.gouv.fr/booking/create/989"
+url = "http://www.seine-saint-denis.gouv.fr/booking/create/17088"
 planning_num = ["990" , "1000", "1001", "1002", "1003", "1005", "1028", "1029"]
 index = list(range(0,8))
 
@@ -43,14 +43,16 @@ while True:
 		True
 
 	try:
-		elem = driver.find_element(by.By.ID,"condition").click()
+		elem = driver.find_element(by.By.ID,"condition")
+		driver.execute_script("arguments[0].click();",elem)
 	except NoSuchElementException:
 		True
 
 	time.sleep(1)
 
 	try:
-		elem = driver.find_element(by.By.NAME,"nextButton").click()
+		elem = driver.find_element(by.By.NAME,"nextButton")
+		driver.execute_script("arguments[0].click();",elem)
 	except NoSuchElementException:
 		True
 
@@ -59,14 +61,16 @@ while True:
 	try:
 		ran = random.choice(index)
 		planning_click='planning'+planning_num[ran]
-		elem = driver.find_element(by.By.ID,planning_click).click()
+		elem = driver.find_element(by.By.ID,planning_click)
+		driver.execute_script("arguments[0].click();",elem)
 	except NoSuchElementException:
 		True
 
 	time.sleep(1)
 
 	try:
-		elem = driver.find_element(by.By.NAME,"nextButton").click()
+		elem = driver.find_element(by.By.NAME,"nextButton")
+		driver.execute_script("arguments[0].click();",elem)
 	except NoSuchElementException:
 		True
 
