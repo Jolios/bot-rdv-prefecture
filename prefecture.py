@@ -10,7 +10,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 import smtplib, ssl
 
-url = "http://www.seine-saint-denis.gouv.fr/booking/create/17088"
+url = "https://www.seine-saint-denis.gouv.fr/booking/create/9636/0"
 planning_num = ["990" , "1000", "1001", "1002", "1003", "1005", "1028", "1029"]
 index = list(range(0,8))
 
